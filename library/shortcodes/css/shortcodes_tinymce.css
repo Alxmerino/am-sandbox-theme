@@ -1,0 +1,67 @@
+/* Button */
+.button {
+    -moz-box-sizing: border-box;
+    border-radius: 3px !important;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 23px;
+    margin: 0;
+    padding: 0 10px 1px;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #21759B !important;
+    background-image: linear-gradient(to bottom, #2A95C5, #21759B) !important;
+    border-color: #21759B #21759B #1E6A8D !important;
+    box-shadow: 0 1px 0 rgba(120, 200, 230, 0.5) inset !important;
+    color: #FFFFFF !important;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.button-secondary  button,
+.button-secondary a {
+    background-color: #EEEEEE;
+    background-image: linear-gradient(to top, #DDDDDD, #FFFFFF);
+    border: 1px solid #BBBBBB;
+    border-radius: 3px 3px 3px 3px;
+    color: #000000;
+    cursor: pointer;
+    font-size: 11px !important;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+}
+
+#tabs label {
+	display: block;
+	float: left;
+	width: 100px;
+	height: 28px;
+	line-height: 28px;
+}
+
+#tabs input,
+#tabs select,
+#tabs textarea {
+	padding: 6px;
+	border-radius: 3px;
+}
+
+#tabs .appendo .inner {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #E1E1E1;
+    border-radius: 5px 5px 5px 5px;
+    padding: 0px 15px 10px;
+    margin-bottom: 10px;
+}
+
+#tabs .appendo label {
+	float: none;
+	font-style: italic;
+	font-weight: bold;
+}
