@@ -8,8 +8,8 @@
 	function am_search_form( $form ) {
 	
 	    $form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-	    		    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __('Search...', 'am_boiler') . '" />
-	    		    <button type="submit" id="searchsubmit">' . __('Search', 'am_boiler') . '</button>
+	    		    <input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="' . __('Search...', 'am_sandbox_theme') . '" />
+	    		    <button type="submit" id="searchsubmit">' . __('Search', 'am_sandbox_theme') . '</button>
 	    		</form>';
 	
 	    return $form;
@@ -25,7 +25,7 @@
 	================================================== */
 	function am_excerpt_more($more) {
 		global $post;
-		return '... <a href="'. get_permalink($post->ID) . '">( ' . __('Read More', 'am_boiler') . ' &rarr; )</a>';
+		return '... <a href="'. get_permalink($post->ID) . '">( ' . __('Read More', 'am_sandbox_theme') . ' &rarr; )</a>';
 	}
 
 	/* add post thumbnails to RSS images

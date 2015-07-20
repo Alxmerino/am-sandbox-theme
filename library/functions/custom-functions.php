@@ -14,7 +14,7 @@ function am_custom_excerpt($length){
 /*  Continue reading link
 /*-----------------------------------------------------------------------------------*/
 function continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">( ' . __( 'Read More', 'am_boiler' ) . ' <span class="meta-nav">&rarr;</span> )</a>';
+	return ' <a href="'. get_permalink() . '">( ' . __( 'Read More', 'am_sandbox_theme' ) . ' <span class="meta-nav">&rarr;</span> )</a>';
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -30,10 +30,10 @@ function am_paging_nav() {
 	<nav class="navigation paging-navigation" role="navigation">
 		<div class="nav-links">
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'am_boiler' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'am_sandbox_theme' ) ); ?></div>
 			<?php endif; ?>
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'am_boiler' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'am_sandbox_theme' ) ); ?></div>
 			<?php endif; ?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -56,8 +56,8 @@ function am_post_nav() {
 
 	<nav class="navigation post-navigation" role="navigation">
 		<div class="nav-links">
-			<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'am_boiler' ) ); ?>
-			<?php next_post_link( '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'am_boiler' ) ); ?>
+			<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'am_sandbox_theme' ) ); ?>
+			<?php next_post_link( '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link', 'am_sandbox_theme' ) ); ?>
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
@@ -69,7 +69,7 @@ function am_post_nav() {
 /*-----------------------------------------------------------------------------------*/
 function am_posts_not_found() { ?>
 	<div id="not-found">
-		<h3><?php _e('No posts found. Try a different search?', 'am_boiler'); ?></h3>  
+		<h3><?php _e('No posts found. Try a different search?', 'am_sandbox_theme'); ?></h3>  
 		<?php get_search_form(); ?>
 	</div>
 	<?php
@@ -85,12 +85,12 @@ function am_entry_meta() {
 	if ( !$format ) { ?>
 
 		<a href="<?php the_permalink(); ?>" class="post-format standard"></a>
-		<?php _e('Posted by:', 'am_boiler'); ?> <?php the_author_posts_link(); ?> <?php _e('on:', 'am_boiler'); ?> <?php the_date('M d, Y'); ?> | <?php _e('comments:', 'am_boiler'); ?> <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
+		<?php _e('Posted by:', 'am_sandbox_theme'); ?> <?php the_author_posts_link(); ?> <?php _e('on:', 'am_sandbox_theme'); ?> <?php the_date('M d, Y'); ?> | <?php _e('comments:', 'am_sandbox_theme'); ?> <?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
 
 	<?php } else { ?>
 
 		<a href="<?php the_permalink(); ?>" class="post-format <?php echo $format; ?>"></a>
-		<?php _e('Posted by:', 'am_boiler'); ?> <?php the_author_posts_link(); ?> <?php _e('on:', 'am_boiler'); ?> <?php the_date('M d, Y'); ?> | <?php _e('comments:', 'am_boiler'); ?> <?php comments_popup_link('No Comments', '1 Comment', '% Comments');
+		<?php _e('Posted by:', 'am_sandbox_theme'); ?> <?php the_author_posts_link(); ?> <?php _e('on:', 'am_sandbox_theme'); ?> <?php the_date('M d, Y'); ?> | <?php _e('comments:', 'am_sandbox_theme'); ?> <?php comments_popup_link('No Comments', '1 Comment', '% Comments');
 
 	}
 }
@@ -112,7 +112,7 @@ if ( !function_exists( 'rand_sponsors' ) ) {
 		if ( $rand_loop->have_posts() ) { ?>
 		
 		<div id="sponsors" class="container">
-			<h2 class="section-title center"><span><?php _e( 'Sponsors', 'am_boiler' ); ?>:</span></h2>
+			<h2 class="section-title center"><span><?php _e( 'Sponsors', 'am_sandbox_theme' ); ?>:</span></h2>
 			
 			<?php while ( $rand_loop->have_posts() ) : $rand_loop->the_post(); ?>
 			
@@ -165,12 +165,12 @@ if ( ! function_exists( 'am_comments' ) ) :
 					<!-- Author avatar -->
 					<?php echo get_avatar( $comment, 80 ); ?><br />
 					<!-- Author's link -->
-					<?php printf( __( '%s', 'am_boiler' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s', 'am_sandbox_theme' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 					<span>
 						<?php
 							/* translators: 1: date */
-							printf( __( '%1$s', 'am_boiler' ), get_comment_date('M d, y') ); ?><br />
-						<?php edit_comment_link( __( '(Edit)', 'am_boiler' ), ' ' ); ?>
+							printf( __( '%1$s', 'am_sandbox_theme' ), get_comment_date('M d, y') ); ?><br />
+						<?php edit_comment_link( __( '(Edit)', 'am_sandbox_theme' ), ' ' ); ?>
 					</span>
 				</div><!-- .comment-author -->
 				<div class="comment-body">
@@ -181,7 +181,7 @@ if ( ! function_exists( 'am_comments' ) ) :
 					</div><!-- .reply -->
 					
 					<?php if ( $comment->comment_approved == '0' ) : ?>
-						<em><?php _( 'Your comment is awaiting moderation.', 'am_boiler' ); ?></em>
+						<em><?php _( 'Your comment is awaiting moderation.', 'am_sandbox_theme' ); ?></em>
 						<br />
 					<?php endif; ?>
 		
@@ -195,7 +195,7 @@ if ( ! function_exists( 'am_comments' ) ) :
 			case 'trackback' :
 		?>
 		<li class="post pingback">
-			<p><?php _e( 'Pingback:', 'am_boiler' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'am_boiler'), ' ' ); ?></p>
+			<p><?php _e( 'Pingback:', 'am_sandbox_theme' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(Edit)', 'am_sandbox_theme'), ' ' ); ?></p>
 		<?php
 				break;
 		endswitch;

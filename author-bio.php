@@ -3,8 +3,8 @@
  * The template for displaying Author bios
  *
  * @package WordPress
- * @subpackage am_boiler
- * @since AM_Framework 1.0
+ * @subpackage am_sandbox_theme
+ * @since AM_Sandbox 1.0
  */
 ?>
 

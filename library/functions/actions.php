@@ -9,7 +9,7 @@
 	function am_register_custom_menus() {
 	  register_nav_menus(
 	    array( 
-	    	'main-menu' => __( 'Main Menu', 'am_boiler' )
+	    	'main-menu' => __( 'Main Menu', 'am_sandbox_theme' )
 	    	)
 	  );
 	}
@@ -19,9 +19,9 @@
 	function am_register_sidebar() {
 
 		register_sidebar( array(
-			'name' => __( 'Home middle-left widget area', 'am_boiler' ),
+			'name' => __( 'Home middle-left widget area', 'am_sandbox_theme' ),
 			'id' => 'home1-widget-area',
-			'description' => __( 'Home\'s middle-left widget area', 'am_boiler' ),
+			'description' => __( 'Home\'s middle-left widget area', 'am_sandbox_theme' ),
 			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title"><span>',
@@ -29,9 +29,9 @@
 		) );
 
 		register_sidebar( array(
-			'name' => __( 'Home middle-rigth widget area', 'am_boiler' ),
+			'name' => __( 'Home middle-rigth widget area', 'am_sandbox_theme' ),
 			'id' => 'home2-widget-area',
-			'description' => __( 'Home\'s middle-rigth widget area', 'am_boiler' ),
+			'description' => __( 'Home\'s middle-rigth widget area', 'am_sandbox_theme' ),
 			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title"><span>',
@@ -39,9 +39,9 @@
 		) );
 
 		register_sidebar( array(
-			'name' => __( 'Home bottom widget area', 'am_boiler' ),
+			'name' => __( 'Home bottom widget area', 'am_sandbox_theme' ),
 			'id' => 'home3-widget-area',
-			'description' => __( 'Home\'s bottom widget area', 'am_boiler' ),
+			'description' => __( 'Home\'s bottom widget area', 'am_sandbox_theme' ),
 			'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
 			'after_widget' => '</div>',
 			'before_title' => '<h3 class="widget-title"><span>',
@@ -50,9 +50,9 @@
 
 		// Area 1, located at the top of the sidebar.
 		register_sidebar( array(
-			'name' => __( 'Sidebar Widget Area', 'am_boiler' ),
+			'name' => __( 'Sidebar Widget Area', 'am_sandbox_theme' ),
 			'id' => 'primary-widget-area',
-			'description' => __( 'The primary widget area', 'am_boiler' ),
+			'description' => __( 'The primary widget area', 'am_sandbox_theme' ),
 			'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 			'after_widget' => '</li>',
 			'before_title' => '<h3 class="widget-title"><span>',

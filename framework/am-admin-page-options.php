@@ -6,7 +6,7 @@
 function am_options_page( $active_tab = '' ) { ?>
 
 	<div class="wrap">
-		<h2><?php _e( 'Theme Options', 'am_framework' ); ?></h2>
+		<h2><?php _e( 'Theme Options', 'AM_Sandbox' ); ?></h2>
 
 		<?php settings_errors(); ?>
 
@@ -16,7 +16,7 @@ function am_options_page( $active_tab = '' ) { ?>
 			
 			<?php 
 
-				settings_fields( 'am_framework_options' );
+				settings_fields( 'AM_Sandbox_options' );
 
 				am_options_fields();
 

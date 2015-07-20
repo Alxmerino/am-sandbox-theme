@@ -4,7 +4,7 @@
 /*	Generates the options fiels that are used in the form
 /*-----------------------------------------------------------------------------------*/
 
-function am_framework_options() {
+function AM_Sandbox_options() {
 	// Build options array
 	$options = array();
 
@@ -69,21 +69,21 @@ function am_framework_options() {
 
 	
 	$options[] = array(
-		'name'		=> __('Basic Settins', 'am_framework'),
+		'name'		=> __('Basic Settins', 'AM_Sandbox'),
 		'type'		=> 'heading'
 	);
 
 		$options[] = array(
-			'name'		=> __('Text Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Text Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_text',
 			'default'	=> 'default Value',
 			'type'		=> 'text'
 		);
 
 		$options[] = array(
-			'name'		=> __('Text Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Text Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_text_mini',
 			'default'	=> 'default Value',
 			'class'		=> 'mini', // mini, tiny, small
@@ -91,24 +91,24 @@ function am_framework_options() {
 		);
 
 		$options[] = array(
-			'name'		=> __('Password Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Password Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_pass',
 			'default'	=> 'default Value',
 			'type'		=> 'password'
 		);
 
 		$options[] = array(
-			'name'		=> __('Textarea Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Textarea Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_textarea',
 			'default'	=> 'default Value',
 			'type'		=> 'textarea'
 		);
 
 		$options[] = array(
-			'name'		=> __('Select Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Select Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_select',
 			'default'	=> 'default Value',
 			'class'		=> 'tiny',
@@ -117,8 +117,8 @@ function am_framework_options() {
 		);
 
 		$options[] = array(
-			'name'		=> __('Radio Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Radio Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_radio',
 			'default'	=> 'default Value',
 			'class'		=> 'tiny',
@@ -127,8 +127,8 @@ function am_framework_options() {
 		);
 
 		$options[] = array(
-			'name'		=> __('Images Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Images Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_images',
 			'default'	=> 'default Value',
 			'type'		=> 'images',
@@ -139,16 +139,16 @@ function am_framework_options() {
 		);
 
 		$options[] = array(
-			'name'		=> __('Checkbox Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Checkbox Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_check',
 			'default'	=> '1',
 			'type'		=> 'checkbox'
 		);
 
 		$options[] = array(
-			'name'		=> __('multicheck Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('multicheck Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_multicheck',
 			'default'	=> $multicheck_defaults,
 			'type'		=> 'multicheck',
@@ -156,31 +156,31 @@ function am_framework_options() {
 		);
 
 		$options[] = array(
-			'name'		=> __('color Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('color Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_color',
 			'default'	=> '',
 			'type'		=> 'color'
 		);
 
 		$options[] = array(
-			'name'		=> __('upload Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('upload Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_upload',
 			'type'		=> 'upload'
 		);
 
 		$options[] = array(
-			'name'		=> __('typography Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('typography Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_typography',
 			'default'	=> $typography_defaults,
 			'type'		=> 'typography'
 		);
 
 		$options[] = array(
-			'name'		=> __('Custom typography Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('Custom typography Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_typography',
 			'default'	=> $typography_defaults,
 			'type'		=> 'typography',
@@ -188,16 +188,16 @@ function am_framework_options() {
 		);
 
 		$options[] = array(
-			'name'		=> __('background Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('background Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_background',
 			'default'	=> $background_defaults,
 			'type'		=> 'background'
 		);
 
 		$options[] = array(
-			'name'		=> __('editor Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('editor Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'id'		=> 'test_editor',
 			'default'	=> 'default Value',
 			'type'		=> 'editor',
@@ -205,8 +205,8 @@ function am_framework_options() {
 		);
 
 		$options[] = array(
-			'name'		=> __('info Input', 'am_framework'),
-			'desc'		=> __( 'A mini description 1', 'am_framework' ),
+			'name'		=> __('info Input', 'AM_Sandbox'),
+			'desc'		=> __( 'A mini description 1', 'AM_Sandbox' ),
 			'type'		=> 'info'
 		);
 

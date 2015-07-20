@@ -11,8 +11,8 @@ class Testimonials_list_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'testimonials_list', // Base ID
-			__('AM List Testimonials', 'am_boiler'), // Name
-			array( 'description' => __( 'Widget to display a list of testimonials', 'am_boiler' ), ) // Args
+			__('AM List Testimonials', 'am_sandbox_theme'), // Name
+			array( 'description' => __( 'Widget to display a list of testimonials', 'am_sandbox_theme' ), ) // Args
 		);
 	}
 
@@ -40,7 +40,7 @@ class Testimonials_list_Widget extends WP_Widget {
 		echo $args['before_widget'];
 		
 		// Display Widget title		
-		echo ( ! empty( $title ) ) ? $args['before_title'] . $title . $args['after_title'] : __('Please select a widget title', 'am_boiler');
+		echo ( ! empty( $title ) ) ? $args['before_title'] . $title . $args['after_title'] : __('Please select a widget title', 'am_sandbox_theme');
 
 		// Render widget content?>
 		<div class="testimonials-wrapper">
@@ -80,7 +80,7 @@ class Testimonials_list_Widget extends WP_Widget {
 		if ( isset( $instance[ 'title' ] ) ) {
 			$title = $instance[ 'title' ];
 		} else {
-			$title = __( 'Testimonials', 'am_boiler' );
+			$title = __( 'Testimonials', 'am_sandbox_theme' );
 		}
 
 		// Set how many testimonials to display
@@ -121,11 +121,11 @@ class Testimonials_list_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'testimonial_count' ); ?>"><?php _e( 'Testimonial Numer:', 'am_boiler' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'testimonial_count' ); ?>"><?php _e( 'Testimonial Numer:', 'am_sandbox_theme' ); ?></label>
 			<input class="widefat" type="text" id="<?php echo $this->get_field_id( 'testimonial_count' ); ?>" name="<?php echo $this->get_field_name( 'testimonial_count' ); ?>" value="<?php echo esc_attr( $testimonial_count ); ?>" >
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'order' ); ?>"><?php _e( 'Display order:', 'am_boiler' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'order' ); ?>"><?php _e( 'Display order:', 'am_sandbox_theme' ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'order' ); ?>" id="<?php echo $this->get_field_id( 'order' ); ?>">
 			<?php foreach ($orderArr as $key => $value) : 
 				$selected = ($key == $order) ? 'selected="selected"' : '';
@@ -135,7 +135,7 @@ class Testimonials_list_Widget extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'orderby' ); ?>"><?php _e( 'Display orderby:', 'am_boiler' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'orderby' ); ?>"><?php _e( 'Display orderby:', 'am_sandbox_theme' ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'orderby' ); ?>" id="<?php echo $this->get_field_id( 'orderby' ); ?>">
 			<?php foreach ($orderbyArr as $key => $value) : 
 				$selected = ($key == $orderby) ? 'selected="selected"' : '';

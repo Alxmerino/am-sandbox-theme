@@ -11,17 +11,17 @@
 ================================================== */
 function am_options_fields() {
 	global $allowedtags;
-	$am_framework_settings = get_option( 'am_framework_options' );
+	$AM_Sandbox_settings = get_option( 'AM_Sandbox_options' );
 
 	// Get the unique id
-	if ( isset( $am_framework_settings['id'] ) ) {
-		$option_name = $am_framework_settings['id'];
+	if ( isset( $AM_Sandbox_settings['id'] ) ) {
+		$option_name = $AM_Sandbox_settings['id'];
 	} else {
-		$option_name = 'am_framework_options';
+		$option_name = 'AM_Sandbox_options';
 	}
 
 	$settings = get_option( $option_name );
-	$options = am_framework_options();
+	$options = AM_Sandbox_options();
 	$counter = 0;
 	$menu = '';
 

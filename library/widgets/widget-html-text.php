@@ -14,8 +14,8 @@ class AM_HTML_Text_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'am_html_text', // Base ID
-			__('AM HTML Text', 'am_boiler'), // Name
-			array( 'description' => __( 'WP editor for HTML text', 'am_boiler' ), ) // Args
+			__('AM HTML Text', 'am_sandbox_theme'), // Name
+			array( 'description' => __( 'WP editor for HTML text', 'am_sandbox_theme' ), ) // Args
 		);
 	}
 
@@ -34,7 +34,7 @@ class AM_HTML_Text_Widget extends WP_Widget {
         echo $args['before_widget'];
         
         // Display Widget title     
-        echo ( ! empty( $title ) ) ? $args['before_title'] . $title . $args['after_title'] : __('Please select a widget title', 'am_boiler');
+        echo ( ! empty( $title ) ) ? $args['before_title'] . $title . $args['after_title'] : __('Please select a widget title', 'am_sandbox_theme');
         ?>
 
         <div class="widget-html-text">
@@ -69,7 +69,7 @@ class AM_HTML_Text_Widget extends WP_Widget {
      **/
     function form( $instance ) {
         $title = ( isset( $instance[ 'title' ] ) ) ? $instance[ 'title' ] : '';
-        $html_content = ( isset( $instance[ 'html_content' ] ) ) ? $instance[ 'html_content' ] : __('Insert content here', 'am_boiler');
+        $html_content = ( isset( $instance[ 'html_content' ] ) ) ? $instance[ 'html_content' ] : __('Insert content here', 'am_sandbox_theme');
         $editor_settings = array(
         	// 'teeny' => true,
         );

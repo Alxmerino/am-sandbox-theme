@@ -11,19 +11,19 @@ function am_register_theme_options() {
 
 	/* Get Theme/Framework info */
 	$theme_data = wp_get_theme();
-	$data = get_option( 'am_framework_options' );
+	$data = get_option( 'AM_Sandbox_options' );
 	$data['theme_name'] = $theme_data['Name'];
 	$data['theme_version'] = $theme_data['Version'];
 	$data['framework_version'] = FRAMEWORK_VERSION;
-	update_option( 'am_framework_options', $data );
+	update_option( 'AM_Sandbox_options', $data );
 
-	$am_framework_settings = get_option( 'am_framework_options' );
+	$AM_Sandbox_settings = get_option( 'AM_Sandbox_options' );
 
 	// Gets unique ID or return default
-	if ( isset( $am_framework_settings['id'] ) ) {
-		$option_name = $am_framework_settings['id'];
+	if ( isset( $AM_Sandbox_settings['id'] ) ) {
+		$option_name = $AM_Sandbox_settings['id'];
 	} else {
-		$option_name = 'am_framework_options';
+		$option_name = 'AM_Sandbox_options';
 	}
 
 	// Return option defaults if no ID is set
@@ -32,6 +32,6 @@ function am_register_theme_options() {
 	}
 
 	// Register Settings
-	register_setting( 'am_framework_options', 'am_framework_options' );
+	register_setting( 'AM_Sandbox_options', 'AM_Sandbox_options' );
 
 }

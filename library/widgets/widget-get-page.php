@@ -13,8 +13,8 @@ class AM_Get_Page_Widget extends WP_Widget {
 	function __construct() {
 		parent::__construct(
 			'get_page', // Base ID
-			__('AM Get Page', 'am_boiler'), // Name
-			array( 'description' => __( 'Display the contents of a page', 'am_boiler' ), ) // Args
+			__('AM Get Page', 'am_sandbox_theme'), // Name
+			array( 'description' => __( 'Display the contents of a page', 'am_sandbox_theme' ), ) // Args
 		);
 	}
 	
@@ -41,7 +41,7 @@ class AM_Get_Page_Widget extends WP_Widget {
 		echo $args['before_widget'];
 
 		// Display Widget title		
-		echo ( ! empty( $title ) ) ? $args['before_title'] . $title . $args['after_title'] : __('Please select a widget title', 'am_boiler');
+		echo ( ! empty( $title ) ) ? $args['before_title'] . $title . $args['after_title'] : __('Please select a widget title', 'am_sandbox_theme');
 		?>
 			<div class="widget-page">
 
@@ -108,8 +108,8 @@ class AM_Get_Page_Widget extends WP_Widget {
 	function form( $instance ) {
 		// Set default page selected
 		$page = ( isset($instance['page']) ) ? $instance['page'] : '';
-		$title = ( isset( $instance[ 'title' ] ) ) ? $instance['title'] : __( 'About', 'am_boiler' );
-		$altLink = ( isset( $instance[ 'alt_link' ] ) ) ? $instance['alt_link'] : __( '', 'am_boiler' );
+		$title = ( isset( $instance[ 'title' ] ) ) ? $instance['title'] : __( 'About', 'am_sandbox_theme' );
+		$altLink = ( isset( $instance[ 'alt_link' ] ) ) ? $instance['alt_link'] : __( '', 'am_sandbox_theme' );
 		
 		$pagesArr = get_posts( array('post_type' => 'page', 'posts_per_page' => -1) );
 		?>
@@ -119,7 +119,7 @@ class AM_Get_Page_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'page' ); ?>"><?php _e( 'Page:', 'am_boiler' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'page' ); ?>"><?php _e( 'Page:', 'am_sandbox_theme' ); ?></label>
 			<select name="<?php echo $this->get_field_name( 'page' ); ?>" id="<?php echo $this->get_field_id( 'page' ); ?>">
 				<?php foreach ($pagesArr as $key => $value) :
 					$selected = ($page == $value->ID) ? 'selected="selected"' : '';

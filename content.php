@@ -5,8 +5,8 @@
  * Used for both single and index/archive/search.
  *
  * @package WordPress
- * @subpackage am_boiler
- * @since AM_Framework 1.0
+ * @subpackage am_sandbox_theme
+ * @since AM_Sandbox 1.0
  */
 ?>
 
@@ -29,7 +29,7 @@
 
 		<!-- <div class="entry-meta">
 			<?php am_entry_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'am_boiler' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'am_sandbox_theme' ), '<span class="edit-link">', '</span>' ); ?>
 		</div> --><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -39,8 +39,8 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'am_boiler' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'am_boiler' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'am_sandbox_theme' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'am_sandbox_theme' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
 

@@ -14,9 +14,9 @@ if ( ! isset( $content_width ) )
 /*	Our Theme Setup
 /*-----------------------------------------------------------------------------------*/
 
-add_action( 'after_setup_theme', 'am_boiler_setup' );
+add_action( 'after_setup_theme', 'am_sandbox_theme_setup' );
 
-function am_boiler_setup() {
+function am_sandbox_theme_setup() {
 	
 	/* Add theme support for automatic feed links. */	
 	add_theme_support( 'automatic-feed-links' ); 
